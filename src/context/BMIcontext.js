@@ -9,10 +9,8 @@ export const BMIProvider = ({ children }) => {
     height: "",
   });
 
-  //const [bmiResult, setBmiResult] = useState(); //bmi sonucu tıbbi olarak
   const [bmiCalc, setBmiCalc] = useState(); //bmi sonucu değer olarak
-  //const [resultComment, setResultComment] = useState();  // bmi result commnet as underweight, normal, obese
-  const [dietList, setDietList] = useState({bmiResult:"", resultComment:"", breakfast:"",lunch:"",dinner:""}); //diet list
+  const [dietList, setDietList] = useState({bmiResult:"", resultComment:"", breakfast:"",lunch:"",dinner:""}); //diet list result
 
   useEffect(() => {
     localStorage.setItem("bmi", JSON.stringify(bmi)); //value object olduğu için Json ile stringfy yaptık
@@ -21,12 +19,8 @@ export const BMIProvider = ({ children }) => {
   const values = {
     bmi,
     setBmi,
-   // bmiResult,
-    //setBmiResult,
     bmiCalc,
     setBmiCalc,
-    //resultComment,
-    //setResultComment,
     dietList,
     setDietList
   };

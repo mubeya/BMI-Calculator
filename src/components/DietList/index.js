@@ -23,6 +23,7 @@ function DietList(props) {
   useEffect(() => {
     //setState işlemini useEffect içinde yaparak render sırasında set işlemini daha sağlıklı bir şekilde yapmış olduk aksi halde hata alırdık
     localStorage.setItem("bmiCalc", bmiCalc);
+    localStorage.setItem("bmiResult", dietList.bmiResult);
     if (bmiCalc <= 19) {
       setDietList((prevState) => ({
         ...prevState,
