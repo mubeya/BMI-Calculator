@@ -23,7 +23,6 @@ function DietList(props) {
   useEffect(() => {
     //setState işlemini useEffect içinde yaparak render sırasında set işlemini daha sağlıklı bir şekilde yapmış olduk aksi halde hata alırdık
     localStorage.setItem("bmiCalc", bmiCalc);
-    localStorage.setItem("bmiResult", dietList.bmiResult);
     if (bmiCalc <= 19) {
       setDietList((prevState) => ({
         ...prevState,
@@ -70,11 +69,12 @@ function DietList(props) {
           "Chapatti (1) + Fish Curry (1/2 cup) + Salad + Fresh Lime (1/2 cup)",
       }));
     }
-  }, [bmiCalc]);
+  }, [setDietList, bmiCalc]);
 
   useEffect(() => {
     localStorage.setItem("date", new Date().toLocaleString() + "");
-  }, [bmiCalc]);
+    localStorage.setItem("bmiResult", dietList.bmiResult);
+  }, [dietList.bmiResult]);
 
   return (
     <div className={styles.formResult}>
