@@ -1,0 +1,21 @@
+.formResult {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 3rem auto;
+}
+
+.newCalcBtn {
+  background-color: #dbd0c0 !important;
+  border-bottom-style: groove !important;
+  margin-top: 1rem;
+}
+
+.dietList {
+  background-color: #dbd0c0;
+  border: solid 1px #dbd0c0;
+  border-radius: 3px;
+  margin: 2rem;
+  padding: 1rem;
+}
